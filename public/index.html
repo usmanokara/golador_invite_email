@@ -3,26 +3,117 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tailwind Body Color</title>
-  <link href="./output.css" rel="stylesheet" />
+  <title>Golador – Welcome</title>
+
+  <!-- Tailwind CDN (so you don’t need a local output.css) -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="h-full bg-[#E8B849]">
+<body class="min-h-screen">
 
-  <!-- Full screen flex container -->
-  <div class="min-h-screen flex flex-col items-center justify-center px-4 text-center">
+  <!-- Orange hero -->
+  <section class="bg-[#E8B849] py-20 px-4">
+    <div class=" text-center">
 
-    <img src="pic1.png" alt="logo" class="w-40 h-40 mb-4" />
+      <!-- Logo -->
+      <img src="pic1.png" alt="Golador logo" class="w-40 h-40 mx-auto mb-6" />
 
-    <p class="text-[52px] leading-tight">
-      Hi <span class="font-bold">James</span>,<br />
-      welcome to Golador!
-    </p>
+      <!-- Greeting -->
+      <p class="text-5xl md:text-6xl font-medium leading-tight">
+        Hi <span class="font-bold">James</span>,<br>
+        welcome to Golador!
+      </p>
 
-    <p class="text-[32px] pt-3">
-      The football community built for players who live the game.
-    </p>
+      <p class="mt-4 text-3xl">
+        The football community built for players who live the game.
+      </p>
 
-  </div>
+      <!-- White card -->
+      <div class="mt-12 bg-[#FFFFFF] rounded-xl shadow-lg p-8 max-w-5xl mx-auto">
+        <h2 class="text-2xl font-bold mb-6">Here’s what you can do right away:</h2>
+        <div class="flex flex-col gap-3">
+        <!-- 1 div -->
+         <div class="flex bg-[#F3F3F3] h-16 items-center rounded-md gap-x-3 w-[930px] gap-y-5">
+          <img src="pic2.png" alt="Golador logo" class="w-11 h-11 ml-3" />
+          <p class="text-[26px] font-bold">Connect with players near you and join their matches.</p>
+         </div>
+ <!-- 2 div -->
+         <div class="flex bg-[#F3F3F3] h-16 items-center rounded-md gap-x-3 w-[930px] gap-y-5">
+          <img src="pic2.png" alt="Golador logo" class="w-11 h-11 ml-3" />
+          <p class="text-[26px] font-bold">Track your perfomance and see how your skill evolve.</p>
+         </div>
+         <!-- 3 div -->
+         <div class="flex bg-[#F3F3F3] h-16 items-center rounded-md gap-x-3 w-[930px] gap-y-5">
+          <img src="pic2.png" alt="Golador logo" class="w-11 h-11 ml-3" />
+          <p class="text-[26px] font-bold">Watch pro tutorials and daily football news in multiple languages.</p>
+         </div>
+          <!-- 4 div -->
+         <div class="flex bg-[#F3F3F3] h-16 items-center rounded-md gap-x-3 w-[930px] gap-y-5">
+          <img src="pic2.png" alt="icon" class="w-11 h-11 ml-3" />
+          <p class="text-[26px] font-bold">Create or join games – choose a location, invite friends, and play!.</p>
+         </div>
+
+        <!-- white card left and right -->
+          <div class="flex justify-between pt-10">
+             <!-- in white div a left side -->
+          <div class="flex flex-col w-[60%] pt-20 gap-5 text-left">
+            <img src="pic3.png" alt="Golador logo" class="w-48 h-12 " />
+            <p class="text-[32px] font-bold">Your account is ready to go.</p>
+            <button class="bg-[#FF743C] h-14  w-[472px] rounded-3xl font-bold text-white text-[24px]">Open the Golador App</button>
+            <p class="text-[32px] font-bold">or Get the Golador app!</p>
+                <div class="flex gap-7 items-center">
+  <img src="pic4.png" alt="Google" class="w-[198px] h-[59px] rounded-full object-cover " />
+  <img src="pic5.png" alt="App store" class="w-[198px] h-[59px] rounded-full object-cover " />
+</div>
+<p class="text-[26px] font-medium">With Golador, football becomes more than a match — it becomes a lifestyle, a network, and a journey of self-improvement."
+</p>
+<p class="text-[20px] text-[#333333]  italic">Dion & Cristiano<br>
+Golador Founders</p>
+          </div>
+          <!-- right side div -->
+ <div class="w-[38%]">
+    <!-- iPhone 11 Frame (Yellow Gold) -->
+    <div class="relative w-[340px] h-[705px] bg-gradient-to-br from-yellow-400 to-amber-500 rounded-[60px] shadow-2xl p-3 overflow-hidden">
+
+        <!-- Inner Black Bezel -->
+        <div class="absolute inset-0 m-3 bg-black rounded-[48px] overflow-hidden">
+
+            <!-- Notch -->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-52 h-8 bg-black rounded-b-3xl z-20"></div>
+
+            <!-- Home Indicator -->
+            <div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-white rounded-full z-20"></div>
+
+            <!-- Screen Area (This is where the app image goes) -->
+            <div class="absolute inset-2 bg-gray-900 rounded-[40px] overflow-hidden flex justify-center items-center">
+
+                <img 
+                    src="pic6.png" 
+                    alt="App Screen" 
+                    class="w-[303px] h-[656px] object-cover"
+                />
+            </div>
+        </div>
+    </div>
+ </div>
+       </div>
+       <hr class="border-t-2 border-gray-300 my-4 w-1/2 mx-auto mt-10" />
+       <!-- below div of text -->
+       <div class="flex flex-col w-[693px] gap-4 mx-auto text-center">
+        <p class="text-[24px] text-[#FF743C]">GDPR + Impressum | Privacy policy | Unsubscribe</p>
+        <p class="text-[24px] text-[#737373]">Golador Connect UG (haftungsbeschränkt)<br> Am Heimbach 42c, 34121 Kassel, Germany</p>
+         <p class="text-[24px] text-[#737373]"> <span class="font-semibold">Managing Directors:</span> Dionatas Gonçalves Paz and Cristiano Fischer Registered with the Commercial Register of Kassel (HRB 123456) VAT ID: DE331497432</p>
+          <p class="text-[24px] text-[#737373]"> <span class="font-semibold">Contact:</span> support@golador.app </p>
+          <p class="text-[24px] text-[#737373]">You’re receiving this email because you created a Golador account. If this wasn’t you, please contact <span class="underline">support@golador.app.</span></p>
+            <p class="text-[24px] text-[#737373] pb-14"> 2025 Golador Connect UG – All rights reserved.</p>
+
+       </div>
+
+</div>
+
+
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
