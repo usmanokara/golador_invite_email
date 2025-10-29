@@ -801,6 +801,10 @@ video {
   width: 260px;
 }
 
+.w-\[90\%\] {
+  width: 90%;
+}
+
 .max-w-5xl {
   max-width: 64rem;
 }
@@ -1365,6 +1369,10 @@ video {
     font-size: 18px;
   }
 
+  .sm\:text-\[22px\] {
+    font-size: 22px;
+  }
+
   .sm\:leading-relaxed {
     line-height: 1.625;
   }
@@ -1474,6 +1482,10 @@ video {
 
   .lg\:flex-row {
     flex-direction: row;
+  }
+
+  .lg\:justify-start {
+    justify-content: flex-start;
   }
 
   .lg\:gap-0 {
