@@ -1,10 +1,7 @@
-
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./*.html",          // all HTML files in the root
-    "./public/*.html"    // or wherever your HTML is
+    "./public/**/*.{html,js}", // scan HTML inside public folder
   ],
   theme: {
     extend: {},
