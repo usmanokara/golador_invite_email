@@ -1,134 +1,304 @@
 <!DOCTYPE html>
 <html lang="en" class="h-full">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Golador – Welcome</title>
-  <link rel="stylesheet" href="./output.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golador – Welcome</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./output.css" />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-</head>
-<body class="min-h-screen">
-
-  <!-- Orange hero -->
-  <section class="bg-[#F1BA47] py-20 px-4">
-    <div class=" text-center">
-
-      <!-- Logo -->
-      <img src="pic1.png" alt="Golador logo" class="w-40 h-40 mx-auto mb-6" />
-
-      <!-- Greeting -->
-      <p class="text-[52px]  leading-tight font-[Barlow]">
-        Hi <span class="font-bold">James</span>,<br>
+  <body class="min-h-screen font-[Barlow] bg-[#F1BA47] pb-16 py-10 px-4">
+    <!-- Header -->
+    <header class="pt-10 px-4 text-center">
+      <img
+        src="pic1.png"
+        alt="Golador logo"
+        class="w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-6"
+      />
+      <h1 class="text-[52px] leading-tight">
+        Hi <span class="font-bold">James</span>,<br />
         welcome to Golador!
-      </p>
-      <p class="mt-4 text-3xl font-[Barlow]">
+      </h1>
+      <p class="mt-2 text-3xl">
         The football community built for players who live the game.
       </p>
-      <!-- 1 white card -->
-        <div class="mt-12 bg-[#FFFFFF] rounded-xl shadow-lg p-8 max-w-5xl mx-auto font-[Barlow]">
-           <p class="text-[36px] font-bold font-cabin"> First things first </p>
-            <p class="text-[24px] font-[Barlow] text-[#737373]  ">Here’s your confirmation code:</p>
-            <!-- code card -->
-            <div class="bg-[#F1BA47] max-w-3xl mx-auto h-[56px] flex relative items-center justify-between px-6 rounded-md mt-4">
-              <!-- Centered Number -->
-  <p class="text-black font-black text-[36px] tracking-wider absolute left-1/2 -translate-x-1/2">
-    874392
-  </p>
-  <!-- Copy Button (Right Side) -->
-  <button 
-    onclick="navigator.clipboard.writeText('874392')"
-    class="absolute right-6 flex items-center gap-1 text-[#313131] hover:text-gray-900 transition-colors text-sm font-medium"
-  >
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-      <path stroke-linecap="round" stroke-linejoin="round" 
-            d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-    </svg>
-    <span class="text-[20px] text-[#313131]">Copy</span> 
-  </button>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <!-- White Card 1 -->
+      <section
+        class="mt-12 bg-white rounded-xl shadow-lg p-12 max-w-5xl mx-auto"
+      >
+        <h2
+          class="text-[36px] font-bold text-center font-[Cabin]"
+        >
+          First things first
+        </h2>
+
+        <p
+          class="text-[24px] text-[#737373] text-center font-[Barlow] mt-2"
+        >
+          Here’s your confirmation code:
+        </p>
+
+        <!-- Code Box -->
+        <div
+          class="bg-[#F1BA47] max-w-3xl mx-auto h-[56px] flex items-center justify-between px-4 sm:px-6 rounded-md mt-5 relative"
+        >
+          <p
+            id="code"
+            class="text-black font-black text-[36px] tracking-wider absolute left-1/2 -translate-x-1/2"
+          >
+            874392
+          </p>
+
+          <!-- Copy Button -->
+          <button
+            onclick="
+              navigator.clipboard.writeText(document.getElementById('code').innerText);
+              const msg = document.getElementById('copied-popup');
+              msg.classList.remove('opacity-0', 'translate-y-3');
+              msg.classList.add('opacity-100', 'translate-y-0');
+              setTimeout(() => {
+                msg.classList.add('opacity-0', 'translate-y-3');
+                msg.classList.remove('opacity-100', 'translate-y-0');
+              }, 1500);
+            "
+            class="absolute right-4 sm:right-6 flex items-center gap-1 text-[#313131] hover:text-gray-900 transition-colors text-xs sm:text-sm font-medium"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4 sm:h-5 sm:w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+              />
+            </svg>
+            <span class="text-[20px] text-[#313131]">Copy</span>
+          </button>
+
+          <!-- Copied Popup -->
+          <div
+            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          >
+            <div
+              id="copied-popup"
+              class="bg-black/70 text-white text-base font-semibold px-4 py-1 rounded-full opacity-0 translate-y-3 transition-all duration-300"
+            >
+              Copied!
             </div>
-            <p class="text-[#737373] text-2xl max-w-xl mx-auto pt-4 font-[Barlow]">Enter this code in the Golador App to confirm your email 
-and unlock your profile.</p>
-        </div>
-     
-      <!-- 2 White card -->
-      <div class="mt-12 bg-[#FFFFFF] rounded-xl shadow-lg p-8 max-w-5xl mx-auto font-[Barlow]">
-        <h2 class="text-2xl font-bold mb-6">Here’s what you can do right away:</h2>
-        <div class="flex flex-col gap-3">
-        <!-- 1 div -->
-         <div class="flex bg-[#F3F3F3] h-16 items-center rounded-md gap-x-3 w-[930px] gap-y-5 font-[Barlow]">
-          <img src="pic8.png" alt="Golador logo" class="w-11 h-11 ml-3" />
-          <p class="text-[26px] font-bold">Connect with players near you and join their matches.</p>
-         </div>
- <!-- 2 div -->
-         <div class="flex bg-[#F3F3F3] h-16 items-center rounded-md gap-x-3 w-[930px] gap-y-5 font-[Barlow]">
-          <img src="pic9.png" alt="Golador logo" class="w-11 h-11 ml-3" />
-          <p class="text-[26px] font-bold">Track your perfomance and see how your skill evolve.</p>
-         </div>
-         <!-- 3 div -->
-         <div class="flex bg-[#F3F3F3] h-16 items-center rounded-md gap-x-3 w-[930px] gap-y-5 font-[Barlow]">
-          <img src="pic10.png" alt="Golador logo" class="w-11 h-11 ml-3" />
-          <p class="text-[26px] font-bold">Watch pro tutorials and daily football news in multiple languages.</p>
-         </div>
-          <!-- 4 div -->
-         <div class="flex bg-[#F3F3F3] h-16 items-center rounded-md gap-x-3 w-[930px] gap-y-5 font-[Barlow]">
-          <img src="pic11.png" alt="icon" class="w-11 h-11 ml-3" />
-          <p class="text-[26px] font-bold">Create or join games – choose a location, invite friends, and play!.</p>
-         </div>
-
-        <!-- white card left and right -->
-          <div class="flex justify-between pt-10 font-[Barlow]">
-             <!-- in white div a left side -->
-          <div class="flex flex-col w-[60%] pt-20 gap-5 text-left">
-            <img src="pic3.png" alt="Golador logo" class="w-48 h-12 " />
-            <p class="text-[32px] font-bold">Your account is ready to go.</p>
-            <button class="bg-[#FF743C] h-14  w-[472px] rounded-3xl font-bold text-white text-[24px]">Open the Golador App</button>
-            <p class="text-[32px] font-bold">or Get the Golador app!</p>
-   <div class="flex gap-7 items-center">
-  <!-- Google -->
-  <div class="bg-black p-1 rounded-full">
-    <img src="pic4.png" alt="Google" class="w-[198px] h-[69px] rounded-full object-cover" />
-  </div>
-
-  <!-- App Store -->
-  <div class="bg-black p-2 rounded-full">
-    <img src="pic5.png" alt="App store" class="w-[198px] h-[59px] rounded-full object-cover" />
-  </div>
-</div>
-
-<p class="text-[26px] font-medium">With Golador, football becomes more than a match — it becomes a lifestyle, a network, and a journey of self-improvement."
-</p>
-<p class="text-[20px] text-[#333333] font-medium  italic">Dion & Cristiano<br>
-Golador Founders</p>
           </div>
-          <!-- right side div -->
- <div class="w-[38%]">
-    
+        </div>
 
-                <img 
-                    src="pic7.png" 
-                    alt="App Screen" 
-                    class="w-[356px] h-[666px] object-cover"
+        <p
+          class="text-[#737373] text-2xl max-w-xl mx-auto pt-5 text-center leading-snug"
+        >
+          Enter this code in the Golador App to confirm your email and unlock
+          your profile.
+        </p>
+      </section>
+
+      <!-- White Card 2 -->
+      <section
+        class="mt-12 bg-white rounded-xl shadow-lg p-10 max-w-5xl mx-auto"
+      >
+        <h2 class="text-2xl font-bold text-center mb-6">
+          Here’s what you can do right away:
+        </h2>
+
+        <!-- Feature Boxes -->
+        <div class="flex flex-col gap-3">
+          <div
+            class="flex flex-row bg-[#F3F3F3] items-center rounded-md gap-x-3 p-4"
+          >
+            <img
+              src="pic8.png"
+              alt="Players connecting icon"
+              class="w-10 h-10 sm:w-11 sm:h-11 object-contain"
+            />
+            <p
+              class="text-[26px] font-bold  text-left"
+            >
+              Connect with players near you and join their matches.
+            </p>
+          </div>
+
+          <div
+            class="flex flex-row bg-[#F3F3F3] items-center rounded-md gap-3 sm:gap-x-3 p-4"
+          >
+            <img
+              src="pic9.png"
+              alt="Performance tracking icon"
+              class="w-10 h-10 sm:w-11 sm:h-11"
+            />
+            <p
+              class="text-[26px] font-bold text-left"
+            >
+              Track your performance and see how your skills evolve.
+            </p>
+          </div>
+
+          <div
+            class="flex flex-row bg-[#F3F3F3] items-center rounded-md gap-3 sm:gap-x-3 p-4"
+          >
+            <img
+              src="pic10.png"
+              alt="Tutorials and news icon"
+              class="w-10 h-10 sm:w-11 sm:h-11"
+            />
+            <p
+              class="text-[20px] sm:text-[26px] font-bold text-left"
+            >
+              Watch pro tutorials and daily football news in multiple languages.
+            </p>
+          </div>
+
+          <div
+            class="flex flex-row bg-[#F3F3F3] items-center rounded-md gap-3 sm:gap-x-3 p-4"
+          >
+            <img
+              src="pic11.png"
+              alt="Create or join games icon"
+              class="w-10 h-10 sm:w-11 sm:h-11"
+            />
+            <p
+              class="text-[20px] sm:text-[26px] font-bold text-left"
+            >
+              Create or join games – choose a location, invite friends, and
+              play!
+            </p>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div
+          class="flex flex-col lg:flex-row text-left pt-10 gap-10 lg:gap-0 items-center"
+        >
+          <!-- Left Content -->
+          <div class="flex flex-col w-[60%] pt-10 lg:pt-20 gap-5">
+            <img
+              src="pic3.png"
+              alt="Golador logo"
+              class="w-48 h-12 mx-auto lg:mx-0"
+            />
+            <p class="text-[32px] font-bold text-center lg:text-left">
+              Your account is ready to go.
+            </p>
+
+            <button
+              class="bg-[#FF743C] h-14  w-[472px] rounded-3xl font-bold text-white text-[20px] sm:text-[24px] mx-auto lg:mx-0"
+            >
+              Open the Golador App
+            </button>
+
+            <p class="text-[32px] font-bold text-center lg:text-left">
+              or Get the Golador app!
+            </p>
+
+            <!-- App Store Buttons -->
+            <div
+              class="flex flex-row gap-5 sm:gap-7 items-center justify-center lg:justify-start"
+            >
+              <div class="bg-black p-2 rounded-full">
+                <img
+                  src="pic4.png"
+                  alt="Get it on Google Play"
+                  class="w-[198px] h-[69px] rounded-full object-cover"
                 />
-        
- </div>
-       </div>
-       <hr class="border-t-2 border-gray-300 my-4 w-1/2 mx-auto mt-10" />
-       <!-- below div of text -->
-       <div class="flex flex-col w-[70%] gap-4 mx-auto text-center font-[Barlow]">
-        <p class="text-[24px] text-[#FF743C]">GDPR + Impressum | Privacy policy | Unsubscribe</p>
-        <p class="text-[24px] text-[#737373]">Golador Connect UG (haftungsbeschränkt)<br>Am Heimbach 42c, 34121 Kassel, Germany</p>
-         <p class="text-[24px] text-[#737373]"> <span class="font-semibold">Managing Directors:</span> Dionatas Gonçalves Paz and Cristiano FischerRegistered with the Commercial Register of Kassel (HRB 123456)VAT ID: DE331497432</p>
-          <p class="text-[24px] text-[#737373]"> <span class="font-semibold">Contact:</span> support@golador.app </p>
-          <p class="text-[24px] text-[#737373]">You’re receiving this email because you created a Golador account.If this wasn’t you, please contact <span class="underline cursor-pointer">support@golador.app.</span></p>
-            <p class="text-[24px] text-[#737373] pb-14"> 2025 Golador Connect UG – All rights reserved.</p>
-       </div>
-</div>
-      </div>
-    </div>
-  </section>
+              </div>
 
-</body>
+              <div class="bg-black p-2 rounded-full">
+                <img
+                  src="pic5.png"
+                  alt="Download on the App Store"
+                  class="w-[198px] h-[59px] rounded-full object-cover"
+                />
+              </div>
+            </div>
+
+            <p
+              class="text-[26px] font-medium  text-left"
+            >
+              With Golador, football becomes more than a match — it becomes a
+              lifestyle, a network, and a journey of self-improvement.
+            </p>
+
+            <p
+              class="text-[20px] text-[#333333] font-medium italic text-center lg:text-left"
+            >
+              Dion & Cristiano<br />
+              Golador Founders
+            </p>
+          </div>
+
+          <!-- Right Side Image -->
+          <div class="w-[38%] flex justify-center">
+            <img
+              src="pic7.png"
+              alt="App screen preview"
+              class="w-[310px] h-auto object-contain"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="bg-[#FFFFFF] rounded-xl shadow-lg p-8 max-w-5xl mx-auto mt-12"
+    >
+      <hr class="border-t-2 border-gray-300 my-8 w-1/2 mx-auto" />
+
+      <div
+        class="flex flex-col w-[70%] gap-4 mx-auto text-center font-[Barlow]"
+      >
+        <p class="text-[24px] text-[#FF743C]">
+          GDPR + Impressum | Privacy policy | Unsubscribe
+        </p>
+
+        <p class="text-[18px] sm:text-[24px] text-[#737373] leading-relaxed">
+          Golador Connect UG (haftungsbeschränkt)<br />
+          Am Heimbach 42c, 34121 Kassel, Germany
+        </p>
+
+        <p class="text-[24px] text-[#737373] leading-relaxed">
+          <span class="font-semibold">Managing Directors:</span> Dionatas
+          Gonçalves Paz and Cristiano Fischer<br />
+          Registered with the Commercial Register of Kassel (HRB 123456)<br />
+          VAT ID: DE331497432
+        </p>
+
+        <p class="text-[24px] text-[#737373]">
+          <span class="font-semibold">Contact:</span> support@golador.app
+        </p>
+
+        <p class="text-[24px] text-[#737373] leading-relaxed">
+          You’re receiving this email because you created a Golador account. If
+          this wasn’t you, please contact
+          <span class="underline cursor-pointer">support@golador.app</span>.
+        </p>
+
+        <p class="text-[24px] text-[#737373] pb-14">
+          © 2025 Golador Connect UG – All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
